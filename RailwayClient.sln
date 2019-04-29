@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayClient", "RailwayClient\RailwayClient.csproj", "{4897BC4A-6B20-4607-A40E-6B04FBCB4781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayClient.Tests", "RailwayClient.Tests\RailwayClient.Tests.csproj", "{B1D88AF6-D016-4BD9-9998-4349F9E32135}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4897BC4A-6B20-4607-A40E-6B04FBCB4781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4897BC4A-6B20-4607-A40E-6B04FBCB4781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4897BC4A-6B20-4607-A40E-6B04FBCB4781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4897BC4A-6B20-4607-A40E-6B04FBCB4781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D88AF6-D016-4BD9-9998-4349F9E32135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D88AF6-D016-4BD9-9998-4349F9E32135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D88AF6-D016-4BD9-9998-4349F9E32135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D88AF6-D016-4BD9-9998-4349F9E32135}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67BE2135-28D2-4B15-AA49-B9BA19A8E7C4}
+	EndGlobalSection
+EndGlobal

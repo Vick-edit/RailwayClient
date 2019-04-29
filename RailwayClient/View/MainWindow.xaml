@@ -1,0 +1,35 @@
+﻿<Window x:Class="RailwayClient.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RailwayClient"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900" MinWidth="900" MinHeight="600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Margin="25">
+            <TextBlock TextWrapping="Wrap" Text="{Binding RailwayHeader, FallbackValue=Ошибка - \{Fallback\}, TargetNullValue=Ошибка - \{Null\}}" Margin="7" DockPanel.Dock="Top"/>
+            <DataGrid ItemsSource="{Binding Railways, Mode=OneWay}" IsReadOnly="True" AutoGenerateColumns="True" VerticalScrollBarVisibility="Visible" DockPanel.Dock="Bottom"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1" Margin="25">
+            <TextBlock TextWrapping="Wrap" Text="{Binding StationHeader, FallbackValue=Ошибка - \{Fallback\}, TargetNullValue=Ошибка - \{Null\}}" Margin="7" DockPanel.Dock="Top"/>
+            <DataGrid ItemsSource="{Binding Stations, Mode=OneWay}" IsReadOnly="True" AutoGenerateColumns="True" VerticalScrollBarVisibility="Visible" DockPanel.Dock="Bottom"/>
+        </DockPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Command="{Binding UpdateСatalogueCommand}" Width="150" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25" Content="Обновить"/>
+            <Button Command="{Binding BuildExcelCommand}" Width="150" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25" Content="Выгрузить"/>
+        </StackPanel>
+        <DockPanel Grid.Row="0" Grid.RowSpan="3" Background="#CCFFFFFF" Visibility="{Binding IsInProcess, Converter={StaticResource BoolToVis}, FallbackValue=Hidden, TargetNullValue=Hidden}" >
+            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/waiting.gif" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </DockPanel>
+    </Grid>
+</Window>
